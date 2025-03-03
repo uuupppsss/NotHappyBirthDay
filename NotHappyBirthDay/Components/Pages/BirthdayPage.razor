@@ -3,8 +3,21 @@
 <div style="text-align:center">
     <input type="text" placeholder="Введите имя..." @bind-value="name"/>
     <button @onclick="GenerateMessage">Поздравить!</button>
-    <h1>@message</h1>
+    <div class="message" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">@message</div>
 </div>
+<style>
+    .message{
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 20px;
+        transition: all 0.5s ease;
+        color: deeppink;
+    }
+    .animate{
+        font-size: 2em;
+        color: hotpink;
+    }
+</style>
 @code {
     string name = "";
     string message = "";
